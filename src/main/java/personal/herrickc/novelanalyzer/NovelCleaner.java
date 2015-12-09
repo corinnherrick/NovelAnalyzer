@@ -34,6 +34,7 @@ public class NovelCleaner {
 
         for (int i=paragraphs.getLength()-1; i >= 0; i--) {
             Node paragraph = paragraphs.item(i);
+
             if (!isValidParagraph(paragraph.getTextContent())) {
                 paragraph.getParentNode().removeChild(paragraph);
             }
